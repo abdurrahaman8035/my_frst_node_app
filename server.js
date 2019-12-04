@@ -9,6 +9,8 @@ const user = {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// use req.body if you have used "post" or req.query if you are using "get" requests in your forms
+
 app.post("/login", (req, res) => {
     if ( req.body.username === user.username && req.body.password === user.password )
     {
